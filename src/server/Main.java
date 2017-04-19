@@ -6,9 +6,10 @@ public class Main {
     	System.out.println("Server start...");
     	new Thread(server).start();
     	
+    	System.out.println(" Please press ENTRE to stop server.");
     	try {
-    	    Thread.sleep(60 * 1000);
-    	} catch (InterruptedException e) {
+    	    System.in.read();
+    	} catch (IOException e) {
     	    e.printStackTrace();
     	}
     	System.out.println("Stopping Server");
